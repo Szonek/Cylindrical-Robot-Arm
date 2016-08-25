@@ -22,16 +22,6 @@ import javax.vecmath.Vector3f;
 
 public class Test_w4 extends JFrame implements KeyListener {
 
-	/*
-	 * DLA MAREZA !! Pamietaj ze wspolrzedne to sa wspolrzedne srodka figury.
-	 * Czyli jezeli cos ma wymiary o dlugosci 0.4f to tak naprawde caly bok ma
-	 * dlugosc 0.8f zmienna wspolrzednaY to wspolrzedna Y obu czlonÛw robota
-	 * zmienna wspolrzednaZ to wspolrzedne polozenia Z czlonu
-	 * wysuwajacego/wsuwajacego. Wspolrzednymi X nie poruszamy wogÛle wsumie.
-	 * 
-	 * zmienne wspolrzednaPrzedmiotuY, wspolrzednaPrzedmiotuZ to odpowiednio
-	 * wspolrzedne Y i Z obiektu ktÛrym manipulujemy
-	 */
 	private static final long serialVersionUID = 1L;
 	private float wymiarCylinderR = 0.1f, wymiarCylinderH = 1.5f;
 	private float wymiarCzlonGoraDolX = 0.2f, wymiarCzlonGoraDolY = 0.1f, wymiarCzlonGoraDolZ = 0.4f;
@@ -81,7 +71,7 @@ public class Test_w4 extends JFrame implements KeyListener {
 	private ArrayList<Float> pamiec_drogi4= new ArrayList<Float>();
 	private ArrayList<Float> pamiec_drogi5= new ArrayList<Float>();
 
-	// TASK ODPOWIEDZIALNY ZA GRAWITACJ 
+	// TASK ODPOWIEDZIALNY ZA GRAWITACJƒò
 	TimerTask grawitacjaTimerTask = new TimerTask() {
 		public void run() {
 			if (kolizjoner.isInKolizja() == false && wspolrzednaPrzedmiotuY > -0.55f) {
@@ -192,7 +182,7 @@ public class Test_w4 extends JFrame implements KeyListener {
 		DrogaZadanaTimer.schedule(TimerDrogizadanej, 0, 200);
 		SimpleUniverse simpleU = new SimpleUniverse(canvas3D);
 
-		// BEHAVIOUR ODPOWIEDZIALNY ZA RUCH KAMER•
+		// BEHAVIOUR ODPOWIEDZIALNY ZA RUCH KAMERƒΩ
 		OrbitBehavior orbit = new OrbitBehavior(canvas3D, OrbitBehavior.STOP_ZOOM);
 		orbit.setReverseRotate(true);
 		// orbit.setTranslateEnable(false);
@@ -274,7 +264,7 @@ public class Test_w4 extends JFrame implements KeyListener {
 		wezel_scena.addChild(tg_podlogi);
 		// ---------------------------------------
 
-		// PRZEDMIOT KT”RM MANIPULUJEMY. COLORCUBE BO £ADNE I £ATWE
+		// PRZEDMIOT KT√ìRM MANIPULUJEMY. COLORCUBE BO ≈ÅADNE I ≈ÅATWE
 		//ColorCube przedmiot = new ColorCube(0.2f);
 		Appearance wygladS = new Appearance();
 		wygladS.setColoringAttributes(new ColoringAttributes(1.0f, 1.0f, 1.0f, 1));
@@ -358,9 +348,9 @@ public class Test_w4 extends JFrame implements KeyListener {
 		{
 			zapis=true;
 		}
-		if(e.getKeyChar()=='k') //koÒczymy zapisywanie
+		if(e.getKeyChar()=='k') //ko≈Ñczymy zapisywanie
 			zapis=false;
-		if(e.getKeyChar()=='o')//odczytujemy zapisanπ trajektorie
+		if(e.getKeyChar()=='o')//odczytujemy zapisan≈° trajektorie
 		{
 			odczyt=true;
 		}
